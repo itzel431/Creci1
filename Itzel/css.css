@@ -1,5 +1,90 @@
-/* ... (estilos previos) ... */
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fb;
+    color: #333;
+}
 
+.logo-text {
+    color: #007bff;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos para la pantalla de inicio de sesión */
+.login-screen {
+    text-align: center;
+    padding-top: 20%;
+}
+
+.login-form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 1em;
+}
+
+.login-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilos para el menú de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #007bff;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    margin-top: 2em;
+}
+
+/* Botones de acción */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -8,13 +93,14 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
     background-color: white;
-    padding: 2em;
+    padding: 20px;
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
