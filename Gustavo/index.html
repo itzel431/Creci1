@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRECI - Apoyo para Mamás Primerizas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Inicio de Sesión -->
+    <div id="loginScreen">
+        <h1>Bienvenida a CRECI</h1>
+        <form id="loginForm">
+            <input type="text" placeholder="Nombre de usuario" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <!-- Menú de Navegación -->
+    <nav class="navbar">
+        <button onclick="showSection('consejos')">Consejos</button>
+        <button onclick="showSection('album')">Álbum</button>
+        <button onclick="showSection('agenda')">Agenda</button>
+        <button onclick="showSection('salud')">Salud</button>
+        <button onclick="showSection('ruidos')">Ruidos</button>
+        <button onclick="showSection('recomendaciones')">Recomendaciones</button>
+    </nav>
+
+    <!-- Sección de Consejos -->
+    <section id="consejos" class="section">
+        <h2>Consejos para el Cuidado del Bebé</h2>
+        <ul>
+            <li onclick="showModal('baño')">Baño del Bebé</li>
+            <li onclick="showModal('pañal')">Cambio de Pañal</li>
+            <li onclick="showModal('alimentación')">Alimentación</li>
+            <li onclick="showModal('dormir')">Posturas para Dormir</li>
+        </ul>
+    </section>
+
+    <!-- Modal de Consejos -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <!-- Sección de Álbum -->
+    <section id="album" class="section">
+        <h2>Álbum de Recuerdos</h2>
+        <form id="photoForm">
+            <input type="file" accept="image/*">
+            <input type="text" placeholder="Descripción">
+            <button type="submit">Agregar Foto</button>
+        </form>
+        <div id="photoGallery"></div>
+    </section>
+
+    <!-- Sección de Agenda -->
+    <section id="agenda" class="section">
+        <h2>Agenda</h2>
+        <input type="text" placeholder="Evento">
+        <input type="date">
+        <button>Agregar Evento</button>
+        <div id="eventList"></div>
+    </section>
+
+    <!-- Sección de Salud -->
+    <section id="salud" class="section">
+        <h2>Registro de Salud</h2>
+        <input type="text" placeholder="Peso">
+        <input type="text" placeholder="Estatura">
+        <button onclick="saveHealthData()">Guardar Registro</button>
+        <canvas id="healthChart"></canvas>
+    </section>
+
+    <!-- Sección de Ruidos Blancos -->
+    <section id="ruidos" class="section">
+        <h2>Ruidos Blancos</h2>
+        <button onclick="playSound('lluvia')">Lluvia</button>
+        <button onclick="playSound('viento')">Viento</button>
+    </section>
+
+    <!-- Sección de Recomendaciones -->
+    <section id="recomendaciones" class="section">
+        <h2>Recomendaciones</h2>
+        <p>Consejos por edad para el desarrollo del bebé.</p>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
